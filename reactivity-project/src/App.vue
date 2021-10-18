@@ -7,9 +7,7 @@
 
 <script> 
 // import HelloWorld from './components/HelloWorld.vue'
-var app = new Vue({
-  el: '#app',
-})
+
 export default {
   name: 'App',
   components: {
