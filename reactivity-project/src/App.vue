@@ -2,10 +2,13 @@
   <div id="app">
     <div class="nav-bar"></div>
     <div class="product"></div>
-    <div class="product-info">
-      <img src="" >
+  
+    <div >
+      <img  v-bind:src="image" v-bind:alt="link" />
     </div>
-    <h1>Outfit of the Day</h1>
+
+    <div class="product-info"></div>
+    <h1>ShopRight</h1>
     <p v-for="product in products" :key="product">{{product}}</p><!-- <img alt="Vue logo" :src="./assets/logo.png">
     <HelloWorld msg="Welcome to Your Vue.js App"/> -->
   </div>
@@ -22,7 +25,8 @@ export default {
   data() {
     return{
       products: ["Bottoms", "Tops", "Accessories"],
-     
+      image: require("./assets/grocery.jpg"),
+      link: "hello"
     }
   }
 }
