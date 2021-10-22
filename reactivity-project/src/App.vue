@@ -11,10 +11,23 @@
       <p v-for="product in products" :key="product">{{product}}</p> <!--creates a div for each product-->
       <p v-if="inStock">In Stock</p>
       <p v-else>Out of Stock</p>
-      <div v-for="variant in variants" :key="variant">
-        <p>{{variant.variantColor}}</p>
+
+      <div v-for="variant in variants" :key="variant.variantId">
+        <p @mouseover="updateProduct(variant.variantImage)">
+          {{variant.variantColor}}
+        </p>
       </div>
+
+      <ul>
+        <li v-for="detail in details" :key="detail">{{ detail }}</li>
+      </ul>
+
     </div>
+    <div class="cart">
+      <p>Cart({{ cart }})</p>
+    </div>
+    <button v-on:click="addToCart">Add to Cart</button>
+    <button v-on:click="removeFromCart">Remove from Cart</button>
     <!-- <p v-if="inStock">In Stock</p>
     <p v-else>Out of Stock</p> -->
    
@@ -30,26 +43,40 @@
 export default {
   name: 'App',
   components: {
-    // HelloWorld
+    // HelloWorld halloween candy bag and are methods basically functions
   },
   data() {
     return{
       products: ["Bottoms", "Tops", "Accessories"],
       image: require("./assets/grocery.jpg"),
       inStock: true,
-      details: ["80% cotton", "20% polyester"],
+      details: ["optionn y", "option x"],
       variants:[
         {
           varriantId: 2234,
-          variantColor: "green"
+          variantColor: "green",
+          variantImage: require("./assets/grocery.jpg")
         },
         {
           variantId: 2235,
-          variantColor: "blue"
+          variantColor: "blue",
+          variantImage: require("./assets/logo.png")
         }
-      ]
+      ],
+      cart: 0,
     }
-  }
+  },
+    methods: {
+        addToCart (){
+          this.cart += 1
+        },
+        removeFromCart(){
+          this.cart -= 1
+        },
+        updateProduct(variantImage){
+          this.image = variantImage
+        }
+      }
 }
 </script>
 
