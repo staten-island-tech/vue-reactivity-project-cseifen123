@@ -1,6 +1,6 @@
 <template>
   <div >
-    <button @click="getMeals(true)"> custom list  </button>
+    <button @click="getMeals(true)"> My Recipes List </button>
     <searchBox 
       v-model="searchKey"
       placeholder="Search Ingredients"
@@ -14,7 +14,6 @@
         :prefList="prefList"
         @removeMeal="removeMeal"
         @addMeal="addMeal"
-			
 			/>
 		</div>
 		<p v-else>
