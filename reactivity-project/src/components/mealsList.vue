@@ -26,7 +26,7 @@ export default {
   {
     description()
     {
-      return( this.prefList || this.mealSelected.added ? 'Click image to Remove from Personal List':'Click image to Add to Personal List');
+      return( this.prefList || this.mealSelected.added ? 'Click image to Remove from My Recipes List':'Click image to Add to My Recipes List');
     }
   }
   

@@ -8,6 +8,7 @@
 <script>
 
 import mealsSelection from './components/mealsSelection.vue'
+
 export default {
   name: 'App',
   components: {

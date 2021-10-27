@@ -17,7 +17,7 @@
 			/>
 		</div>
 		<p v-else>
-			Nothing left in the list. Add a new todo in the input above.
+			Nothing left in the list. Add a new ingredient in the input above.
 		</p>
   </div>
 </template>
@@ -57,7 +57,7 @@ export default {
       console.log("search key is " + searchParams);
   // GET request using fetch with async/await
   this.prefList =choice;
-  if (choice  )
+  if (choice)
      this.meals=this.favList;
   else 
   try {
