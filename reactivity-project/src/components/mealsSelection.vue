@@ -78,7 +78,7 @@ export default {
          
     } catch (error) {
     console.log(error);
-    alert("Sorry! Seems like something went wrong.");
+    alert("Sorry! It seems like something went wrong.");
   }
   },
   addMeal(mealToAdd) {
