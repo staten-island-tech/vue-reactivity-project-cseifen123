@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <H1> Recipes App</H1>
+    <h1> Recipes App</h1>
     <mealsSelection/>
   </div>
 </template>
@@ -13,7 +13,6 @@ export default {
   name: 'App',
   components: {
   mealsSelection
-   
   }
 }
 </script>

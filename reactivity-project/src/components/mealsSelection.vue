@@ -23,6 +23,7 @@
 </template>
 
 <script>
+
 import searchBox from './searchBox.vue'
 import mealsList from './mealsList.vue'
 class item {
