@@ -1,6 +1,6 @@
 <template>
   <div >
-    <button @click="getMeals(true)"> My Recipes List </button>
+    <button @click="getMeals(true)"> My Meals List </button>
     <searchBox 
       v-model="searchKey"
       placeholder="Search Ingredients"
