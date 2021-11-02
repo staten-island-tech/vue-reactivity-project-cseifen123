@@ -2,9 +2,15 @@
   <div class="item">
     <figure> 
       
-        <img :src="mealSelected.itemImg"   @click="$emit(prefList || mealSelected.added ? 'removeMeal':'addMeal',mealSelected.itemID)" 
-      :title="description"  :class="{green:!mealSelected.added, red :mealSelected.added }">
-      <figcaption :class="{actionGreen:!mealSelected.added, actionRed :mealSelected.added }">{{ mealSelected.itemTitle }} <br> {{description}}</figcaption>
+        <img 
+        :src="mealSelected.itemImg"   
+        @click="$emit(prefList || mealSelected.added ? 'removeMeal':'addMeal',mealSelected.itemID)" 
+       :title="description"  :class="{green:!mealSelected.added, red :mealSelected.added }">
+
+      <figcaption :class="{actionGreen:!mealSelected.added, actionRed :mealSelected.added }">
+        {{ mealSelected.itemTitle }}
+         <br> <span style="font-size: 13px">{{description}}</span>
+      </figcaption>
     </figure>
           
   </div>

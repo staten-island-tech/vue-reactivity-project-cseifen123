@@ -25,6 +25,10 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+
+}
+body{
+  background-color: rgba(156, 156, 156, 0.418);
 }
 </style>
 

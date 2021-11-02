@@ -38,9 +38,6 @@ class item {
 
 export default {
   name: 'MealsSelection',
-  props: {
-    
-  },
   components:{searchBox, mealsList},
   data () 
   { 
@@ -92,7 +89,7 @@ export default {
       let newItem = this.meals[newItemIndex];
 
          
-			this.favList.push(new item(newItem.itemID,newItem.itemTitle,newItem.itemImg,false));
+			this.favList.push(newItem);
       
      
 	},
@@ -129,4 +126,5 @@ a {
   justify-content: center;
   
 }
+
 </style>
